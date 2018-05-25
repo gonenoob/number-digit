@@ -12,7 +12,8 @@ function minInt(num, len) {
   }
 
   return num.toLocaleString(language, {
-    minimumIntegerDigits: len
+    minimumIntegerDigits: len,
+    maximumFractionDigits: 20
   })
 }
 
@@ -24,6 +25,12 @@ function minDec(num, len) {
 
   if (!isIntAndRange(len, 0, 20)) {
     return
+  }
+
+  if (len < 3) {
+    return num.toLocaleString(language, {
+      maximumFractionDigits: len
+    })
   }
 
   return num.toLocaleString(language, {
