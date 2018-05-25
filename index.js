@@ -13,7 +13,8 @@ function minInt(num, len) {
 
   return num.toLocaleString(language, {
     minimumIntegerDigits: len,
-    maximumFractionDigits: 20
+    maximumFractionDigits: 20,
+    useGrouping: false
   })
 }
 
@@ -27,14 +28,13 @@ function minDec(num, len) {
     return
   }
 
-  if (len < 3) {
-    return num.toLocaleString(language, {
-      maximumFractionDigits: len
-    })
+  if (len <= 3) {
+    return String(num)
   }
 
   return num.toLocaleString(language, {
-    minimumFractionDigits: len
+    minimumFractionDigits: len,
+    useGrouping: false
   })
 }
 
@@ -49,35 +49,8 @@ function maxDec(num, len) {
   }
 
   return num.toLocaleString(language, {
-    maximumFractionDigits: len
-  })
-}
-
-function minDig (num, len) {
-  if (!isNumber(num)) {
-    return
-  }
-
-  if (!isIntAndRange(len, 0, 21)) {
-    return
-  }
-
-  return num.toLocaleString(language, {
-    minimumSignificantDigits: len
-  })
-}
-
-function maxDig (num, len) {
-  if (!isNumber(num)) {
-    return
-  }
-
-  if (!isIntAndRange(len, 0, 21)) {
-    return
-  }
-
-  return num.toLocaleString(language, {
-    maximumSignificantDigits: len
+    maximumFractionDigits: len,
+    useGrouping: false
   })
 }
 
@@ -96,7 +69,5 @@ function isIntAndRange(num, min, max) {
 module.exports = {
   minInt,
   minDec,
-  maxDec,
-  minDig,
-  maxDig
+  maxDec
 }
