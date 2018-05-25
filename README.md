@@ -1,4 +1,6 @@
 # number-digit
+[![Build Status](https://travis-ci.org/gonenoob/Promise.svg?branch=master)]
+(https://github.com/gonenoob/number-digit)
 
 ## Install
 
