@@ -2,7 +2,7 @@ const isNumber = require('isnumber')
 const language = 'en'
 
 //最小整数位数
-const minInt = (num, len) => {
+function minInt(num, len) {
   if (!isNumber(num)) {
     return
   }
@@ -17,7 +17,7 @@ const minInt = (num, len) => {
 }
 
 //最小小数位数
-const minDec = (num, len) => {
+function minDec(num, len) {
   if (!isNumber(num)) {
     return
   }
@@ -32,7 +32,7 @@ const minDec = (num, len) => {
 }
 
 //最多小数位数
-const maxDec = (num, len) => {
+function maxDec(num, len) {
   if (!isNumber(num)) {
     return
   }
@@ -46,7 +46,7 @@ const maxDec = (num, len) => {
   })
 }
 
-const minDig = (num, len) => {
+function minDig (num, len) {
   if (!isNumber(num)) {
     return
   }
@@ -60,7 +60,7 @@ const minDig = (num, len) => {
   })
 }
 
-const maxDig = (num, len) => {
+function maxDig (num, len) {
   if (!isNumber(num)) {
     return
   }
