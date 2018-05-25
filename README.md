@@ -1,6 +1,5 @@
 # number-digit
-[![Build Status](https://travis-ci.org/gonenoob/number-digit.svg?branch=master)]
-(https://github.com/gonenoob/number-digit)
+[![Build Status](https://travis-ci.org/gonenoob/number-digit.svg?branch=master)](https://travis-ci.org/gonenoob/number-digit)
 
 ## Install
 
