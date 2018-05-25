@@ -7,7 +7,7 @@ function minInt(num, len) {
     return
   }
 
-  if (!isIntAndRange(num, 1, 21)) {
+  if (!isIntAndRange(len, 1, 21)) {
     return
   }
 
@@ -22,7 +22,7 @@ function minDec(num, len) {
     return
   }
 
-  if (!isIntAndRange(num, 0, 20)) {
+  if (!isIntAndRange(len, 0, 20)) {
     return
   }
 
@@ -37,7 +37,7 @@ function maxDec(num, len) {
     return
   }
 
-  if (!isIntAndRange(num, 0, 20)) {
+  if (!isIntAndRange(len, 0, 20)) {
     return
   }
 
@@ -51,7 +51,7 @@ function minDig (num, len) {
     return
   }
 
-  if (!isIntAndRange(num, 0, 21)) {
+  if (!isIntAndRange(len, 0, 21)) {
     return
   }
 
@@ -65,7 +65,7 @@ function maxDig (num, len) {
     return
   }
 
-  if (!isIntAndRange(num, 0, 21)) {
+  if (!isIntAndRange(len, 0, 21)) {
     return
   }
 
