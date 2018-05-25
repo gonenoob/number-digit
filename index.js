@@ -2,7 +2,7 @@ const isNumber = require('isnumber')
 const language = 'en'
 
 //最小整数位数
-export const minInt = (num, len) => {
+const minInt = (num, len) => {
   if (!isNumber(num)) {
     return
   }
@@ -17,7 +17,7 @@ export const minInt = (num, len) => {
 }
 
 //最小小数位数
-export const minDec = (num, len) => {
+const minDec = (num, len) => {
   if (!isNumber(num)) {
     return
   }
@@ -32,7 +32,7 @@ export const minDec = (num, len) => {
 }
 
 //最多小数位数
-export const maxDec = (num, len) => {
+const maxDec = (num, len) => {
   if (!isNumber(num)) {
     return
   }
@@ -46,7 +46,7 @@ export const maxDec = (num, len) => {
   })
 }
 
-export const MinDig = (num, len) => {
+const minDig = (num, len) => {
   if (!isNumber(num)) {
     return
   }
@@ -60,7 +60,7 @@ export const MinDig = (num, len) => {
   })
 }
 
-export const MaxDig = (num, len) => {
+const maxDig = (num, len) => {
   if (!isNumber(num)) {
     return
   }
@@ -84,4 +84,12 @@ function isIntAndRange(num, min, max) {
   }
 
   return false
+}
+
+module.exports = {
+  minInt,
+  minDec,
+  maxDec,
+  minDig,
+  maxDig
 }
